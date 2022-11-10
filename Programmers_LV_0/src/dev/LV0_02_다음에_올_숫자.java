@@ -1,6 +1,6 @@
 package dev;
 
-public class 다음에_올_숫자 {
+public class LV0_02_다음에_올_숫자 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

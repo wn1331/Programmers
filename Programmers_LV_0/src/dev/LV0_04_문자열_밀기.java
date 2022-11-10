@@ -1,6 +1,6 @@
 package dev;
 import java.util.Arrays;
-public class 문자열_밀기 {
+public class LV0_04_문자열_밀기 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

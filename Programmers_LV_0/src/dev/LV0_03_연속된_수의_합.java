@@ -1,6 +1,6 @@
 package dev;
 
-public class 연속된_수의_합 {
+public class LV0_03_연속된_수의_합 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
