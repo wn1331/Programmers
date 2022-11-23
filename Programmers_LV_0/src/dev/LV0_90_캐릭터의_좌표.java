@@ -1,6 +1,6 @@
 package dev;
 
-public class LV0_51_피자_나눠_먹기_2 {
+public class LV0_90_캐릭터의_좌표 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
