@@ -1,8 +1,5 @@
 package dev;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class LV0_100_평행 {
 
     public static void main(String[] args) {
@@ -27,13 +24,9 @@ public class LV0_100_평행 {
         //inc배열 출력해보기
         for(double d : inclination) System.out.print(d+" ");
         System.out.println();
-        count = 0;
+
         for(int i = 0; i<inclination.length;i++){
             for(int j = i+1;j<inclination.length;j++){
-//                if(inclination[i]==Arrays.binarySearch(inclination,inclination[j])) {
-//                    System.out.println("일치하는 두 개의 기울기 "+inclination[i]+"와 "+inclination[j]+"가 있습니다.");
-//                    System.exit(1);
-//                }
                 if(inclination[i]==inclination[j]){
                     System.out.println("일치하는 두 개의 기울기 "+inclination[i]+"와 "+inclination[j]+"가 있습니다.");
                     System.exit(1);
