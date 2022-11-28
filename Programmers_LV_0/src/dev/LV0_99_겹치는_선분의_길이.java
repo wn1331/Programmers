@@ -15,31 +15,42 @@ public class LV0_99_겹치는_선분의_길이 {
             }
         ArrayList<Arr> arr = new ArrayList<>();
         //for문으로 값 넣기.
-        for(int i = 0;i<max-min+1;i++) arr.add(new Arr(min+i,0));
-
-        //출력
-        for(int i = 0;i<max-min+1;i++)arr.get(i).show();
-
-        //
-        int count = 0;
+        for(int i = 0;i<max-min+1;i++) {
+            if(arr.size()!=max-min)arr.add(new Arr(min+i,min+i+1));
+        }
+        //계산식.
+        //lines의 요소만큼 수행.
         for(int i = 0; i<lines.length;i++){
+//            //lines의 요소의 길이(0번째 인덱스부터 1번째 인덱스 길이) 만큼 수행.
             for(int j = lines[i][0]; j<lines[i][1];j++){
-                if(arr.get(count).number==j)arr.get(count).count+=1;
-
+                System.out.println(j+"에서 "+(j+1)+"연결");
+                for(int cnt = 0;cnt<arr.size();cnt++){
+                    if(arr.get(cnt).first_number==j){
+                        arr.get(cnt).count+=1;
+                    }
+                }
             }
         }
-        System.out.println(min+","+max);
+        //연산 후 출력
+        for(int i = 0;i<max-min;i++)arr.get(i).show();
+        for(Arr ar : arr)if(ar.count>=2)answer++;
+        System.out.println(answer);
+
+
 
     }
     static class Arr{
-        int number;
+        int first_number;
+        int second_number;
         int count;
-        Arr(int number, int count){
-            this.number = number;
+
+        Arr(int first_number,int second_number){
+            this.first_number = first_number;
+            this.second_number = second_number;
             this.count = 0;
         }
         public void show(){
-            System.out.println("index : "+this.number+" count : "+this.count);
+            System.out.println("numbers : "+this.first_number+", "+this.second_number + " count : "+this.count);
         }
     }
 
