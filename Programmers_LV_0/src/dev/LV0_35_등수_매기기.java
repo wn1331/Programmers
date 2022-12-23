@@ -14,7 +14,7 @@ public class LV0_35_등수_매기기 {
 			for(int j = 0; j<score.length;j++) {
 				if(i!=j&&score[i][0]+score[i][1]>=score[j][0]+score[j][1]) {
 					answer[i]--;
-					System.out.println("score"+i+"번째가 "+j+"번째보다 작거나 같습니다. 하나뺌");
+					System.out.println("score"+i+"번째가 "+j+"번째보다 크거나 같습니다. 하나뺌");
 				}
 			}
 			
